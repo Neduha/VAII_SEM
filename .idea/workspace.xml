@@ -4,24 +4,146 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="" />
+    <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/ConfirmablePasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/EmailVerificationPromptController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/NewPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/PasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/PasswordResetLinkController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/VerifyEmailController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Requests/ProfileUpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/View/Components/AppLayout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/app/View/Components/GuestLayout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/confirm-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/reset-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/verify-email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/application-logo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/auth-session-status.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/danger-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/dropdown-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/dropdown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/input-error.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/input-label.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/nav-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/primary-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/responsive-nav-link.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/secondary-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/text-input.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/delete-user-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/update-password-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/update-profile-information-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/routes/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/RegistrationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/ProfileTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/myLogin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/speedruns/composer.json" />
+    </option>
+  </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/speedruns/composer.json</pharConfigPath>
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Neduha&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Neduha/VAII_SEM.git&quot;,
+    &quot;accountId&quot;: &quot;09554426-49e5-43fa-ae3d-dbe67acdd92d&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/speedruns/resources/views/games.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php-8.3.13-Win32-vs16-x64\php.exe">
     <include_path>
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/translation" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/validation" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/view" />
       <path value="$PROJECT_DIR$/speedruns/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/speedruns/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/speedruns/vendor/psr/http-factory" />
@@ -38,6 +160,7 @@
       <path value="$PROJECT_DIR$/speedruns/vendor/nette/utils" />
       <path value="$PROJECT_DIR$/speedruns/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/speedruns/vendor/league/config" />
+      <path value="$PROJECT_DIR$/speedruns/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/speedruns/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/speedruns/vendor/league/mime-type-detection" />
       <path value="$PROJECT_DIR$/speedruns/vendor/league/flysystem" />
@@ -147,7 +270,8 @@
   "keyToString": {
     "Docker.speedruns: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -206,11 +330,29 @@
       <workItem from="1731588888124" duration="14917000" />
       <workItem from="1732197862199" duration="4975000" />
       <workItem from="1732280436840" duration="18099000" />
-      <workItem from="1732382112366" duration="4283000" />
+      <workItem from="1732382112366" duration="7411000" />
+      <workItem from="1732390610937" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
