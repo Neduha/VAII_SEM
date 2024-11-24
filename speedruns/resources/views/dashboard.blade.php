@@ -13,6 +13,5 @@
 @section('content')
     <div class="center-text">
         <h2>Welcome back to your Dashboard</h2>
-        <p>Here you can manage your account, view your progress, and much more!</p>
     </div>
 @endsection
