@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="darkened-container">
+    <div class="darkened-container games-container">
         <div class="games-grid">
             @for ($i = 1; $i <= 15; $i++)
                 <div class="game-card">

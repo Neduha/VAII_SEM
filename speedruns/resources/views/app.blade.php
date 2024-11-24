@@ -22,6 +22,7 @@
         @else
 
             <button class="btn btn-login-out" onclick="location.href='{{ route('login') }}'">Log In</button>
+            <button class="btn btn-login-out" onclick="location.href='{{ route('register') }}'">Sign Up</button>
         @endif
     </div>
 </header>

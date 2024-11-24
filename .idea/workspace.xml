@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/games.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/games.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +278,7 @@
       <workItem from="1732280436840" duration="18099000" />
       <workItem from="1732382112366" duration="7411000" />
       <workItem from="1732390610937" duration="570000" />
-      <workItem from="1732400958510" duration="7174000" />
+      <workItem from="1732400958510" duration="12609000" />
     </task>
     <servers />
   </component>
