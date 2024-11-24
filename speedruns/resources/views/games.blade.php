@@ -5,7 +5,8 @@
 @section('page-title', 'Games')
 
 @section('nav-buttons')
-    <button class="btn" onclick="location.href='{{ route('notImplemented') }}'">Profile</button>
+    <button class="btn" onclick="location.href='{{ route('profile.view') }}'">Profile</button>
+
     <button class="btn" onclick="location.href='{{ route('notImplemented') }}'">Settings</button>
 @endsection
 
