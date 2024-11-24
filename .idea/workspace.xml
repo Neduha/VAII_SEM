@@ -5,65 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/ConfirmablePasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/EmailVerificationPromptController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/NewPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/PasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/PasswordResetLinkController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/Auth/VerifyEmailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/Http/Requests/ProfileUpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/View/Components/AppLayout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/app/View/Components/GuestLayout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/confirm-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/forgot-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/reset-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/verify-email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/application-logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/auth-session-status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/danger-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/dropdown-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/dropdown.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/input-error.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/input-label.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/primary-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/responsive-nav-link.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/secondary-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/components/text-input.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/delete-user-form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/update-password-form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/profile/partials/update-profile-information-form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/routes/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/Auth/RegistrationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/myLogin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/speedruns/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,22 +215,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.speedruns: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.speedruns: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\marti\PhpstormProjects\VAII_SEM\speedruns\resources\views" />
@@ -332,6 +281,7 @@
       <workItem from="1732280436840" duration="18099000" />
       <workItem from="1732382112366" duration="7411000" />
       <workItem from="1732390610937" duration="570000" />
+      <workItem from="1732400958510" duration="7174000" />
     </task>
     <servers />
   </component>

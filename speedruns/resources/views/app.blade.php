@@ -13,7 +13,16 @@
         @yield('nav-buttons')
     </div>
     <div class="right-buttons">
-        <button class="btn btn-login-out" onclick="location.href='{{ route('login') }}'">Log In</button>
+        @if (Auth::check())
+
+            <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+                @csrf
+                <button type="submit" class="btn btn-login-out">Log Out</button>
+            </form>
+        @else
+
+            <button class="btn btn-login-out" onclick="location.href='{{ route('login') }}'">Log In</button>
+        @endif
     </div>
 </header>
 
