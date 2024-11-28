@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +8,81 @@
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    background: url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?cs=srgb&dl=pexels-philippedonn-1169754.jpg&fm=jpg') no-repeat center center fixed;
+    background: var(--background-image) no-repeat center center fixed;
     background-size: cover;
+}
+
+:root {
+    --primary-color: #1e4652;
+    --primary-darker-color: #1b2e33;
+    --secondary-color: #af4902;
+    --secondary-darker-color: #873701;
+    --background-image: url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?cs=srgb&dl=pexels-philippedonn-1169754.jpg&fm=jpg');
+}
+
+
+[data-theme='default'] {
+    --primary-color: #1e4652;
+    --primary-darker-color: #1b2e33;
+    --secondary-color: #af4902;
+    --secondary-darker-color: #873701;
+    --background-image: url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?cs=srgb&dl=pexels-philippedonn-1169754.jpg&fm=jpg');
+}
+
+
+[data-theme='green'] {
+    --primary-color: #1f7a34;
+    --primary-darker-color: #006400;
+    --secondary-color: #6B8E23;
+    --secondary-darker-color: #556B2F;
+    --background-image: url('https://images2.alphacoders.com/881/thumb-1920-881506.jpg');
+}
+
+
+[data-theme='purple'] {
+    --primary-color: #1e22c6;
+    --primary-darker-color: #081363;
+    --secondary-color: #9932CC;
+    --secondary-darker-color: #800080;
+    --background-image: url('https://wallpapers.com/images/hd/4k-space-purple-nebula-9l0wgukn25jl3pgq.webp');
+}
+
+
+body, html {
+    background: var(--background-image) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 10px;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-darker-color);
+
+    transform: scale(1.05);
+}
+
+.btn-login-out {
+    background-color: var(--secondary-color);
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.btn-login-out:hover {
+    background-color: var(--secondary-darker-color);
+
+    transform: scale(1.05);
 }
 
 .page-title {
@@ -56,7 +130,7 @@ body, html {
 }
 
 .btn {
-    background-color: #1e4652;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -69,49 +143,22 @@ body, html {
 }
 
 .btn:hover {
-    background-color: #1b2e33;
+    background-color: var(--primary-darker-color);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
 
 .btn-login-out {
-    background-color: #af4902;
+    background-color: var(--secondary-color);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
-
 .btn-login-out:hover {
-    background-color: #873701;
+    background-color: var(--secondary-darker-color);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
-}
-
-.top-bar .btn {
-    margin: 0 10px;
-}
-
-
-.btn:hover {
-    transform: scale(1.05);
-    background-color: #1b2e33;
-}
-
-.btn-login-out {
-    background-color: #af4902;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-left: 6px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-login-out:hover {
-    background-color: #873701;
 }
 
 .darkened-container {
@@ -201,7 +248,7 @@ body, html {
 .game-card h3 {
     font-size: 1rem;
     margin: 0;
-    background-color: #af4902;
+    background-color: var(--secondary-color);
     color: white;
     padding: 5px;
     text-align: center;
@@ -229,7 +276,6 @@ body {
     margin: auto;
 }
 
-
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -252,7 +298,7 @@ body {
 }
 
 .btn-login {
-    background-color: #af4902;
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -264,11 +310,9 @@ body {
     max-width: 500px;
 }
 
-
 .btn-login:hover {
-    background-color: #873701;
+    background-color: var(--secondary-darker-color);
 }
-
 
 .btn-delete {
     background-color: #d9534f;
@@ -286,3 +330,17 @@ body {
     background-color: #c9302c;
 }
 
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-option label {
+    position: relative;
+    top: 10px;
+}
+
+.theme-option input[type="radio"] {
+    margin: 0;
+}

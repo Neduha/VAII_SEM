@@ -35,5 +35,12 @@
     @yield('content')
 </div>
 
+@yield('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme') || 'default';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    });
+</script>
 </body>
 </html>

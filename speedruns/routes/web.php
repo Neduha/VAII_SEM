@@ -8,6 +8,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/games', [PageController::class, 'games'])->name('games');
 Route::get('/not-implemented', [PageController::class, 'notImplemented'])->name('notImplemented');
+Route::get('/settings', [PageController::class, 'settings'])->name('settings');
 
 
 Route::get('/dashboard', function () {
