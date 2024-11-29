@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="auth-container">
-        <!-- Update Profile Information -->
+
         <div class="form-group">
             <h3>Update Profile Information</h3>
             <form method="POST" action="{{ route('profile.update') }}" class="auth-form">
@@ -15,7 +15,7 @@
 
                 <div class="form-group">
                     <label for="name" class="form-label">Name</label>
-                    <input id="name" type="text" name="name" class="form-input" value="{{ old('name', $user->name) }}" required autofocus>
+                    <input id="name" type="text" name="name" class="form-input" value="{{ old('name', $user->name) }}" required autofocus minlength="3" maxlength="15">
                     @error('name')
                     <span class="error">{{ $message }}</span>
                     @enderror
@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                     <label for="email" class="form-label">Email</label>
-                    <input id="email" type="email" name="email" class="form-input" value="{{ old('email', $user->email) }}" required>
+                    <input id="email" type="email" name="email" class="form-input" value="{{ old('email', $user->email) }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     @error('email')
                     <span class="error">{{ $message }}</span>
                     @enderror
@@ -37,17 +37,17 @@
 
         <hr class="divider">
 
-        <!-- Update Password -->
+
         <div class="form-group">
             <h3>Update Password</h3>
             <form method="POST" action="{{ route('password.update') }}" class="auth-form">
                 @csrf
-                @method('patch')
+                @method('put')
 
                 <div class="form-group">
                     <label for="current_password" class="form-label">Current Password</label>
                     <input id="current_password" type="password" name="current_password" class="form-input" required>
-                    @error('current_password')
+                    @error('current_password', 'updatePassword')
                     <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label for="password" class="form-label">New Password</label>
                     <input id="password" type="password" name="password" class="form-input" required>
-                    @error('password')
+                    @error('password', 'updatePassword')
                     <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
@@ -63,7 +63,7 @@
                 <div class="form-group">
                     <label for="password_confirmation" class="form-label">Confirm New Password</label>
                     <input id="password_confirmation" type="password" name="password_confirmation" class="form-input" required>
-                    @error('password_confirmation')
+                    @error('password_confirmation', 'updatePassword')
                     <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
@@ -76,7 +76,7 @@
 
         <hr class="divider">
 
-        <!-- Delete User -->
+
         <div class="form-group">
             <h3>Delete Account</h3>
             <form method="POST" action="{{ route('profile.destroy') }}" class="auth-form">
