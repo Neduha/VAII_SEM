@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/settings.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/speedruns/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/speedruns/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/database/migrations/2024_11_29_174610_create_speedruns_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/database/migrations/2024_11_29_174610_create_speedruns_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/speedruns/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/games.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/games.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/myLogin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/speedruns/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +286,11 @@
       <workItem from="1732540368267" duration="57000" />
       <workItem from="1732552777079" duration="606000" />
       <workItem from="1732622795066" duration="103000" />
-      <workItem from="1732641757557" duration="15629000" />
+      <workItem from="1732641757557" duration="16831000" />
+      <workItem from="1732821255866" duration="746000" />
+      <workItem from="1732893165485" duration="13596000" />
+      <workItem from="1732965232426" duration="8132000" />
+      <workItem from="1733243083697" duration="1130000" />
     </task>
     <servers />
   </component>

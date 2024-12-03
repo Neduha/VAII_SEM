@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SpeedrunController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -9,6 +10,10 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/games', [PageController::class, 'games'])->name('games');
 Route::get('/not-implemented', [PageController::class, 'notImplemented'])->name('notImplemented');
 Route::get('/settings', [PageController::class, 'settings'])->name('settings');
+
+Route::resource('speedruns', SpeedrunController::class);
+
+
 
 
 Route::get('/dashboard', function () {
