@@ -7,33 +7,41 @@
 @section('content')
     <div class="auth-container">
 
-        <div class="form-group">
-            <h3>Update Profile Information</h3>
-            <form method="POST" action="{{ route('profile.update') }}" class="auth-form">
-                @csrf
-                @method('patch')
+            <div class="form-group">
+                <h3>Update Profile Information</h3>
+                <form method="POST" action="{{ route('profile.update') }}" class="auth-form" enctype="multipart/form-data">
+                    @csrf
+                    @method('patch')
 
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" type="text" name="name" class="form-input" value="{{ old('name', $user->name) }}" required autofocus minlength="3" maxlength="15">
-                    @error('name')
-                    <span class="error">{{ $message }}</span>
-                    @enderror
-                </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" type="text" name="name" class="form-input" value="{{ old('name', $user->name) }}" required autofocus minlength="3" maxlength="15">
+                        @error('name')
+                        <span class="error">{{ $message }}</span>
+                        @enderror
+                    </div>
 
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" type="email" name="email" class="form-input" value="{{ old('email', $user->email) }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    @error('email')
-                    <span class="error">{{ $message }}</span>
-                    @enderror
-                </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" name="email" class="form-input" value="{{ old('email', $user->email) }}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        @error('email')
+                        <span class="error">{{ $message }}</span>
+                        @enderror
+                    </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn">Save Changes</button>
-                </div>
-            </form>
-        </div>
+                    <div class="form-group">
+                        <label for="profile_photo" class="form-label">Profile Photo</label>
+                        <input type="file" id="profile_photo" name="profile_photo" class="form-input">
+                        @error('profile_photo')
+                        <span class="error">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
 
         <hr class="divider">
 

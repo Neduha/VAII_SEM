@@ -7,11 +7,19 @@
 @section('content')
     <div class="auth-container">
 
+        <div class="profile-photo-container" style="text-align: center; margin-bottom: 20px;">
+            @if($user->profile_photo)
+                <img src="{{ asset('storage/' . $user->profile_photo) }}" alt="Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+            @else
+                <img src="{{ asset('default-profile.png') }}" alt="Default Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+            @endif
+        </div>
+
         <h3>Your Profile</h3>
         <p><strong>Name:</strong> {{ $user->name }}</p>
         <p><strong>Email:</strong> {{ $user->email }}</p>
 
-        <div class="form-group" style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+        <div class="form-group">
             <a href="{{ route('profile.edit') }}" class="btn">Edit Profile</a>
         </div>
     </div>
