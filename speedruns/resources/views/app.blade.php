@@ -11,6 +11,9 @@
     <div class="left-section">
         <a href="{{ route('home') }}" class="site-title">SpeedRunsHub</a>
         @yield('nav-buttons')
+        @if(auth()->check() && auth()->user()->role === 'admin')
+            <button class="btn" onclick="location.href='{{ route('admin.dashboard') }}'">Admin</button>
+        @endif
     </div>
     <div class="right-buttons">
         @if (Auth::check())
@@ -20,7 +23,6 @@
                 <button type="submit" class="btn btn-login-out">Log Out</button>
             </form>
         @else
-
             <button class="btn btn-login-out" onclick="location.href='{{ route('login') }}'">Log In</button>
             <button class="btn btn-login-out" onclick="location.href='{{ route('register') }}'">Sign Up</button>
         @endif
