@@ -39,23 +39,29 @@
         @else
             <ul class="speedrun-list">
                 @foreach($user->speedruns as $speedrun)
-                    <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 10px;">
-                        <strong>Game:</strong> {{ $speedrun->game_name ?? 'N/A' }}<br>
-                        <strong>Category:</strong> {{ $speedrun->category }}<br>
-                        <strong>Time:</strong> {{ gmdate('H:i:s', $speedrun->run_time) }}<br>
-                        <strong>Date:</strong> {{ $speedrun->date ?? 'N/A' }}<br>
-                        <strong>Description:</strong> {{ $speedrun->description ?? 'No description' }}<br>
-                        <strong>Verified:</strong> {{ $speedrun->verified_status ? 'Yes' : 'No' }}<br>
-                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                    <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 10px; background-color: #2c2c2c; display: flex; flex-direction: column; width: 500px; max-width: 100%; word-wrap: break-word;">
+
+                        <div style="flex: 1; line-height: 1.6;">
+                            <strong>Game:</strong> {{ $speedrun->game_name ?? 'N/A' }}<br>
+                            <strong>Category:</strong> {{ $speedrun->category }}<br>
+                            <strong>Time:</strong> {{ gmdate('H:i:s', $speedrun->run_time) }}<br>
+                            <strong>Date:</strong> {{ $speedrun->date ?? 'N/A' }}<br>
+                            <strong>Description:</strong>
+                            <span style="display: inline;">{{ $speedrun->description ?? 'No description' }}</span><br>
+                            <strong>Verified:</strong> {{ $speedrun->verified_status ? 'Yes' : 'No' }}
+                        </div>
+
+                        <div style="margin-top: 15px; display: flex; justify-content: space-between;">
                             <form method="POST" action="{{ route('speedruns.destroy', $speedrun->id) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-delete">Delete</button>
-                                <a href="{{ route('speedruns.edit', $speedrun->id) }}" class="btn">Update</a>
                             </form>
-
+                            <a href="{{ route('speedruns.edit', $speedrun->id) }}" class="btn">Update</a>
                         </div>
                     </li>
+
+
                 @endforeach
             </ul>
         @endif

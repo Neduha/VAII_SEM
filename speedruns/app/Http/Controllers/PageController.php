@@ -34,4 +34,6 @@ class PageController extends Controller
     {
         return view('settings');
     }
+
+
 }

@@ -18,6 +18,7 @@ class ProfileUpdateRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'min:3', 'max:15'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $this->user()->id],
+            'profile_photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ];
     }
 }

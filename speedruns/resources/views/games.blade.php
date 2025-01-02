@@ -6,19 +6,18 @@
 
 @section('nav-buttons')
     <button class="btn" onclick="location.href='{{ route('profile.view') }}'">Profile</button>
-
     <button class="btn" onclick="location.href='{{ route('settings') }}'">Settings</button>
 @endsection
 
 @section('content')
     <div class="darkened-container games-container">
         <div class="games-grid">
-            @for ($i = 1; $i <= 15; $i++)
+            @foreach ($games as $game)
                 <div class="game-card">
-                    <img src="https://via.placeholder.com/150" alt="Game {{ $i }}">
-                    <h3>Game {{ $i }}</h3>
+                    <img src="{{ $game->image }}" alt="{{ $game->name }}" style="width: 100%; height: auto; border-radius: 10px;">
+                    <h3>{{ $game->name }}</h3>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 @endsection
