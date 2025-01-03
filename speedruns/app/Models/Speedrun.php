@@ -11,7 +11,9 @@ class Speedrun extends Model
 
     protected $fillable = [
         'user_id',
+        'game_id',
         'game_name',
+        'category_id',
         'category',
         'run_time',
         'video_url',
@@ -20,8 +22,20 @@ class Speedrun extends Model
         'description',
     ];
 
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
+    public function game()
+    {
+        return $this->belongsTo(Game::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
 }

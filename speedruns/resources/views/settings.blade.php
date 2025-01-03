@@ -6,7 +6,7 @@
 
 @section('nav-buttons')
     <button class="btn" onclick="location.href='{{ route('home') }}'">Home</button>
-    <button class="btn" onclick="location.href='{{ route('games') }}'">Games</button>
+    <button class="btn" onclick="location.href='{{ route('games.index') }}'">Games</button>
 
 @endsection
 

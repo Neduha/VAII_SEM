@@ -12,12 +12,15 @@
 @section('content')
     <div class="darkened-container games-container">
         <div class="games-grid">
-            @foreach ($games as $game)
+            @foreach($games as $game)
                 <div class="game-card">
-                    <img src="{{ $game->image }}" alt="{{ $game->name }}" style="width: 100%; height: auto; border-radius: 10px;">
-                    <h3>{{ $game->name }}</h3>
+                    <a href="{{ route('games.show', $game->id) }}" style="text-decoration: none; color: inherit;">
+                        <img src="{{ $game->image }}" alt="{{ $game->name }}" style="max-width: 100%; height: auto;">
+                        <h3>{{ $game->name }}</h3>
+                    </a>
                 </div>
             @endforeach
         </div>
+
     </div>
 @endsection

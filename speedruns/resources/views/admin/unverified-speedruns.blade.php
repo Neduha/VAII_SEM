@@ -14,7 +14,7 @@
                 @foreach($unverifiedSpeedruns as $speedrun)
                     <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 10px; display: flex; flex-direction: column; position: relative; min-height: 250px; background-color: #2e2e2e; color: white; max-width: 600px;  text-align: left;">
 
-                        <!-- User Photo and Name -->
+
                         <div style="display: flex; align-items: center; margin-bottom: 10px;">
                             @if($speedrun->user->profile_photo)
                                 <img src="{{ asset('storage/' . $speedrun->user->profile_photo) }}" alt="User Photo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-right: 20px;">
@@ -24,7 +24,7 @@
                             <p><strong>By:</strong> {{ $speedrun->user->name }}</p>
                         </div>
 
-                        <!-- Speedrun Details -->
+
                         <div style="flex: 1; width: 100%;">
                             <strong>Game:</strong> {{ $speedrun->game_name ?? 'N/A' }}<br>
                             <strong>Category:</strong> {{ $speedrun->category }}<br>
@@ -36,7 +36,7 @@
                             </p>
                         </div>
 
-                        <!-- Verify Button -->
+
                         <form method="POST" action="{{ route('admin.speedruns.verify', $speedrun->id) }}" style="position: absolute; bottom: 20px; right: 20px;">
                             @csrf
                             <button type="submit" class="btn btn-success">Verify</button>

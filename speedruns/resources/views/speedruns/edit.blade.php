@@ -10,14 +10,28 @@
         <form method="POST" action="{{ route('speedruns.update', $speedrun->id) }}">
             @csrf
             @method('PUT')
-            <div class="form-group">
-                <label for="game_name">Game Name:</label>
-                <input type="text" id="game_name" name="game_name" value="{{ $speedrun->game_name }}" required>
+            <div>
+                <label for="game_id">Game</label>
+                <select name="game_id" id="game_id" required>
+                    @foreach($games as $game)
+                        <option value="{{ $game->id }}" {{ old('game_id', $speedrun->game_id ?? '') == $game->id ? 'selected' : '' }}>
+                            {{ $game->name }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
-            <div class="form-group">
-                <label for="category">Category:</label>
-                <input type="text" id="category" name="category" value="{{ $speedrun->category }}" required>
+
+            <div>
+                <label for="category_id">Category</label>
+                <select name="category_id" id="category_id" required>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}" {{ old('category_id', $speedrun->category_id ?? '') == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
+
             <div class="form-group">
                 <label for="run_time">Run Time (in seconds):</label>
                 <input type="number" id="run_time" name="run_time" value="{{ $speedrun->run_time }}" required>

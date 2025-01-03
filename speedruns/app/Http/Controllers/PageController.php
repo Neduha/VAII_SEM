@@ -20,11 +20,6 @@ class PageController extends Controller
         return view('not-implemented');
     }
 
-    public function games()
-    {
-        return view('games');
-    }
-
     public function login()
     {
         return view('login');

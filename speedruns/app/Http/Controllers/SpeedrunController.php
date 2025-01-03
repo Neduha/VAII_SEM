@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Speedrun;
 use Illuminate\Http\Request;
+use App\Models\Game;
+use App\Models\Category;
 
 class SpeedrunController extends Controller
 {
@@ -26,7 +28,10 @@ class SpeedrunController extends Controller
      */
     public function create()
     {
-        return view('speedruns.create');
+        $games = Game::all();
+        $categories = Category::all();
+
+        return view('speedruns.create', compact('games', 'categories'));
     }
 
     /**
@@ -35,20 +40,28 @@ class SpeedrunController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'game_name' => 'required|string|max:255',
-            'category' => 'required|string|max:255',
+            'game_id' => 'required|exists:games,id',
+            'category_id' => 'required|exists:categories,id',
             'run_time' => 'required|integer|min:1',
             'video_url' => 'nullable|url',
             'date' => 'nullable|date',
             'description' => 'nullable|string|max:1000',
         ]);
 
+
+        $game = Game::findOrFail($validated['game_id']);
+        $category = Category::findOrFail($validated['category_id']);
+
+        $validated['game_name'] = $game->name;
+        $validated['category'] = $category->name;
         $validated['user_id'] = auth()->id();
 
         Speedrun::create($validated);
 
-        return redirect()->route('profile.view')->with('success', 'Speedrun created ');
+        return redirect()->route('profile.view')->with('success', 'Speedrun created successfully!');
     }
+
+
 
 
     /**
@@ -66,7 +79,10 @@ class SpeedrunController extends Controller
      */
     public function edit(Speedrun $speedrun)
     {
-        return view('speedruns.edit', compact('speedrun'));
+        $games = Game::all();
+        $categories = Category::all();
+
+        return view('speedruns.edit', compact('speedrun', 'games', 'categories'));
     }
 
     /**
@@ -75,14 +91,14 @@ class SpeedrunController extends Controller
     public function update(Request $request, Speedrun $speedrun)
     {
         $validated = $request->validate([
-            'game_name' => 'required|string|max:255',
-            'category' => 'required|string|max:255',
+            'game_id' => 'required|exists:games,id',
+            'category_id' => 'required|exists:categories,id',
             'run_time' => 'required|integer|min:1',
             'video_url' => 'nullable|url',
             'date' => 'nullable|date',
             'description' => 'nullable|string|max:1000',
-            'verified_status' => 'required|boolean',
         ]);
+
 
         $speedrun->update($validated);
 

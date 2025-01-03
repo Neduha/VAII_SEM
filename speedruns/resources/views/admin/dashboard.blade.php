@@ -11,6 +11,7 @@
             <button class="btn" onclick="location.href='{{ route('admin.speedruns.unverified') }}'">Speedruns to Verify</button>
             <button class="btn" onclick="location.href='{{ route('speedruns.index') }}'">View All Speedruns</button>
             <button class="btn" onclick="location.href='{{ route('profile.view') }}'">Back to Profile</button>
+            <button class="btn" onclick="location.href='{{ route('admin.games.create') }}'">Add New Game</button>
         </div>
     </div>
 @endsection
