@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class GamesController extends Controller
 {
@@ -39,8 +40,42 @@ class GamesController extends Controller
 
     public function show(Game $game)
     {
+
+        $speedruns = $game->speedruns()
+            ->whereHas('category', function ($query) {
+                $query->where('name', 'Any%');
+            })
+            ->with('user')
+            ->get();
+
+        $categories = Category::all();
         $speedrunCount = $game->speedruns->count();
-        return view('game-show', compact('game', 'speedrunCount'));
+
+        return view('game-show', compact('game', 'speedruns', 'categories', 'speedrunCount'));
+    }
+
+    public function filterSpeedruns(Game $game, Request $request)
+    {
+        $category = $request->query('category', 'any%');
+
+        $speedruns = $game->speedruns()
+            ->whereHas('category', function ($query) use ($category) {
+                if ($category !== 'all') {
+                    $query->where('name', $category);
+                }
+            })
+            ->with('user')
+            ->get()
+            ->map(function ($speedrun) {
+                return [
+                    'user_name' => $speedrun->user->name,
+                    'date' => $speedrun->date,
+                    'run_time' => gmdate('H:i:s', $speedrun->run_time),
+                    'verified' => $speedrun->verified_status,
+                ];
+            });
+
+        return response()->json($speedruns);
     }
 
 

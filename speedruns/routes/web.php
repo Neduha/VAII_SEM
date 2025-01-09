@@ -10,12 +10,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 // Games Routes
-Route::get('/games', [GamesController::class, 'index'])->name('games');
+Route::get('/games', [GamesController::class, 'index'])->name('games.index');
 Route::get('/games/{game}', [GamesController::class, 'show'])->name('games.show');
+Route::get('/games/{game}/speedruns', [GamesController::class, 'filterSpeedruns'])->name('games.speedruns');
+
+
+
 
 // Other PageController Routes
 Route::get('/not-implemented', [PageController::class, 'notImplemented'])->name('notImplemented');
 Route::get('/settings', [PageController::class, 'settings'])->name('settings');
+Route::get('/speedruns/recent', [SpeedrunController::class, 'recent'])->name('speedruns.recent');
 
 // Speedruns Resource Routes
 Route::resource('speedruns', SpeedrunController::class);

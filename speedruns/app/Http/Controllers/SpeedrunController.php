@@ -115,4 +115,30 @@ class SpeedrunController extends Controller
         return redirect()->route('profile.view')->with('success', 'Speedrun deleted ');
     }
 
+    public function recent()
+    {
+        $speedruns = Speedrun::with(['user', 'game', 'category'])
+            ->latest('created_at')
+            ->take(10)
+            ->get()
+            ->map(function ($speedrun) {
+                return [
+                    'game_name' => $speedrun->game->name ?? 'Unknown Game',
+                    'category_name' => $speedrun->category->name ?? 'Unknown Category',
+                    'user_name' => $speedrun->user->name ?? 'Anonymous',
+                    'user_photo' => $speedrun->user->profile_photo
+                        ? asset('storage/' . $speedrun->user->profile_photo)
+                        : asset('default-profile.png'),
+                    'run_time' => gmdate('H:i:s', $speedrun->run_time),
+                    'date' => $speedrun->date,
+                    'verified_status' => $speedrun->verified_status,
+                    'description' => $speedrun->description ?? 'No description',
+                ];
+            });
+
+        return response()->json(['speedruns' => $speedruns]);
+    }
+
+
+
 }

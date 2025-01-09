@@ -12,8 +12,7 @@
         @else
             <ul class="speedrun-list" style="list-style: none; padding: 0;">
                 @foreach($unverifiedSpeedruns as $speedrun)
-                    <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 10px; display: flex; flex-direction: column; position: relative; min-height: 250px; background-color: #2e2e2e; color: white; max-width: 600px;  text-align: left;">
-
+                    <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 10px; display: flex; flex-direction: column; position: relative; min-width: 500px;  background-color: rgba(0, 0, 0, 0.7); color: white; max-width: 700px; text-align: left;">
 
                         <div style="display: flex; align-items: center; margin-bottom: 10px;">
                             @if($speedrun->user->profile_photo)
@@ -23,7 +22,6 @@
                             @endif
                             <p><strong>By:</strong> {{ $speedrun->user->name }}</p>
                         </div>
-
 
                         <div style="flex: 1; width: 100%;">
                             <strong>Game:</strong> {{ $speedrun->game_name ?? 'N/A' }}<br>
@@ -35,7 +33,6 @@
                                 {{ $speedrun->description ?? 'No description' }}
                             </p>
                         </div>
-
 
                         <form method="POST" action="{{ route('admin.speedruns.verify', $speedrun->id) }}" style="position: absolute; bottom: 20px; right: 20px;">
                             @csrf

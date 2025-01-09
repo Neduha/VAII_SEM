@@ -11,8 +11,9 @@ class Game extends Model
 
     public function speedruns()
     {
-        return $this->hasMany(Speedrun::class);
+        return $this->hasMany(Speedrun::class, 'game_id');
     }
+
 
     protected $fillable = [
         'name',
