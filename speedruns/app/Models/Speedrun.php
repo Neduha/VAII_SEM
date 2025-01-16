@@ -14,7 +14,6 @@ class Speedrun extends Model
         'game_id',
         'game_name',
         'category_id',
-        'category',
         'run_time',
         'video_url',
         'verified_status',

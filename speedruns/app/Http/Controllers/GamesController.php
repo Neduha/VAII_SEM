@@ -80,4 +80,36 @@ class GamesController extends Controller
 
 
 
+    public function search(Request $request)
+    {
+
+        $query = $request->query('query', '');
+
+        if (empty($query)) {
+            return response()->json(['games' => []]);
+        }
+
+        $games = Game::query()
+            ->where('name', 'like', '%' . $query . '%')
+            ->get()
+            ->map(function ($game) {
+                return [
+                    'id' => $game->id,
+                    'name' => $game->name,
+                    'image' => $game->image,
+                    'release_date' => \Carbon\Carbon::parse($game->release_date)->year,
+                    'speedrun_count' => $game->speedruns->count(),
+                ];
+            });
+
+        return response()->json(['games' => $games]);
+    }
+
+
+
+
+
+
+
+
 }

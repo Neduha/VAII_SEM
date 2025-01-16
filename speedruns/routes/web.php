@@ -6,11 +6,13 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GamesController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 // Games Routes
 Route::get('/games', [GamesController::class, 'index'])->name('games.index');
+Route::get('/games/search', [GamesController::class, 'search'])->name('games.search');
 Route::get('/games/{game}', [GamesController::class, 'show'])->name('games.show');
 Route::get('/games/{game}/speedruns', [GamesController::class, 'filterSpeedruns'])->name('games.speedruns');
 
@@ -49,4 +51,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::fallback(function () {
+    return response()->json([
+        'error' => 'Route not found',
+        'uri' => request()->path()
+    ], 404);
+});
 require __DIR__ . '/auth.php';
+
+

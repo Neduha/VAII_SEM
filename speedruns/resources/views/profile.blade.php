@@ -43,7 +43,7 @@
 
                         <div style="flex: 1; line-height: 1.6;">
                             <strong>Game:</strong> {{ $speedrun->game_name ?? 'N/A' }}<br>
-                            <strong>Category:</strong> {{ $speedrun->category }}<br>
+                            <strong>Category:</strong> {{ $speedrun->category->name ?? 'Unknown Category' }}<br>
                             <strong>Time:</strong> {{ gmdate('H:i:s', $speedrun->run_time) }}<br>
                             <strong>Date:</strong> {{ $speedrun->date ?? 'N/A' }}<br>
                             <strong>Description:</strong>
