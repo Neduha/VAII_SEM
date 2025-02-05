@@ -30,39 +30,38 @@ class SpeedrunController extends Controller
     {
         $games = Game::all();
         $categories = Category::all();
-
         return view('speedruns.create', compact('games', 'categories'));
     }
+
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(\App\Http\Requests\SpeedrunRequest $request)
     {
-        $validated = $request->validate([
-            'game_id' => 'required|exists:games,id',
-            'category_id' => 'required|exists:categories,id',
-            'run_time' => 'required|integer|min:1',
-            'video_url' => 'nullable|url',
-            'date' => 'nullable|date',
-            'description' => 'nullable|string|max:1000',
-        ]);
+        $validated = $request->validated();
 
 
-        $game = Game::findOrFail($validated['game_id']);
-        $category = Category::findOrFail($validated['category_id']);
+        if (isset($validated['run_time'])) {
+            $timeParts = explode(':', $validated['run_time']);
+            if (count($timeParts) === 3) {
+                [$hours, $minutes, $seconds] = $timeParts;
+                $validated['run_time'] = ((int)$hours * 3600) + ((int)$minutes * 60) + (int)$seconds;
 
-        $validated['game_name'] = $game->name;
-        $validated['category'] = $category->name;
-        $validated['user_id'] = auth()->id();
+            }
 
-        Speedrun::create($validated);
+            $game = Game::findOrFail($validated['game_id']);
+            $category = Category::findOrFail($validated['category_id']);
 
-        return redirect()->route('profile.view')->with('success', 'Speedrun created successfully!');
+            $validated['game_name'] = $game->name;
+            $validated['category'] = $category->name;
+            $validated['user_id'] = auth()->id();
+
+            Speedrun::create($validated);
+
+            return redirect()->route('profile.view')->with('success', 'Speedrun created successfully!');
+        }
     }
-
-
-
 
     /**
      * Display the specified resource.
@@ -139,6 +138,7 @@ class SpeedrunController extends Controller
 
         return response()->json(['speedruns' => $speedruns]);
     }
+
 
 
 

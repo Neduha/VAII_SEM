@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2b08015-450b-402a-9ae7-e172aadda073" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/speedruns/resources/views/admin/unverified-speedruns.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/app/Http/Controllers/SpeedrunController.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/app/Http/Controllers/SpeedrunController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/speedruns/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/speedruns/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/speedruns/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/resources/views/speedruns/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speedruns/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/speedruns/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/speedruns/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,13 +228,14 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\marti\PhpstormProjects\VAII_SEM\speedruns\resources\views\profile" />
       <recent name="C:\Users\marti\PhpstormProjects\VAII_SEM\speedruns\resources\views" />
+      <recent name="C:\Users\marti\PhpstormProjects\VAII_SEM\speedruns\resources\views\profile" />
       <recent name="C:\Users\marti\PhpstormProjects\VAII_SEM\speedruns\resources\views\layouts" />
     </key>
   </component>
@@ -295,7 +297,9 @@
       <workItem from="1733729206726" duration="4108000" />
       <workItem from="1733733385495" duration="1002000" />
       <workItem from="1735492556817" duration="19708000" />
-      <workItem from="1735740277796" duration="9091000" />
+      <workItem from="1735740277796" duration="9561000" />
+      <workItem from="1735828001749" duration="92720000" />
+      <workItem from="1738766015498" duration="1315000" />
     </task>
     <servers />
   </component>
