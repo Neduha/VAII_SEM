@@ -34,8 +34,7 @@
 
                         data.speedruns.forEach(speedrun => {
                             const runCard = `
-                            <li class="speedrun-item" style="margin-bottom: 40px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 10px; display: flex; flex-direction: column; position: relative; min-height: 250px; background-color: rgba(0, 0, 0, 0.7); color: white; max-width: 600px; text-align: left;">
-
+                            <li class="speedrun-item">
                                 <div style="display: flex; align-items: center; margin-bottom: 10px;">
                                     <img src="${speedrun.user_photo}" alt="User Photo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-right: 20px;">
                                     <p><strong>By:</strong> ${speedrun.user_name}</p>

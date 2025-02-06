@@ -114,21 +114,6 @@ body, html {
     z-index: 2;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
-}
-
-.left-section h1 {
-    color: white;
-    margin-right: 20px;
-}
-
-.right-buttons {
-    display: flex;
-    gap: 10px;
-}
-
 .btn {
     background-color: var(--primary-color);
     color: white;
@@ -278,7 +263,49 @@ body, html {
     color: rgba(200, 200, 200, 1);
 }
 
+.speedrun-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
 
+.speedrun-description {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.speedrun-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container .btn {
+    padding: 8px 15px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 35px;
+}
+.speedrun-list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 body {
     overflow-x: hidden;
@@ -351,7 +378,15 @@ body {
 }
 
 .theme-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.theme-form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
@@ -363,6 +398,8 @@ body {
 
 .theme-option input[type="radio"] {
     margin: 0;
+    width: 16px;
+    height: 16px;
 }
 
 .speedrun-list {
@@ -372,24 +409,27 @@ body {
 }
 
 .speedrun-item {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.speedrun-item {
     max-width: 50%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-    margin: 0 auto;
-    padding: 15px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7) !important;
     color: white;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.unverified-speedrun {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    min-width: 500px;
+    max-width: 700px;
 }
 
 .profile-photo-img {
@@ -422,3 +462,20 @@ body {
     margin-bottom: 15px;
 }
 
+.user-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-actions form {
+    margin: 0;
+}
+
+.user-actions button {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

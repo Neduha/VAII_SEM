@@ -17,8 +17,6 @@ Route::get('/games/{game}', [GamesController::class, 'show'])->name('games.show'
 Route::get('/games/{game}/speedruns', [GamesController::class, 'filterSpeedruns'])->name('games.speedruns');
 
 
-
-
 // Other PageController Routes
 Route::get('/not-implemented', [PageController::class, 'notImplemented'])->name('notImplemented');
 Route::get('/settings', [PageController::class, 'settings'])->name('settings');
@@ -32,7 +30,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/speedruns/unverified', [AdminController::class, 'unverifiedSpeedruns'])->name('admin.speedruns.unverified');
     Route::post('/admin/speedruns/{speedrun}/verify', [AdminController::class, 'verifySpeedrun'])->name('admin.speedruns.verify');
-
+    // Admin User Management
+    Route::get('/admin/users/search', [AdminController::class, 'searchUsers'])->name('admin.users.search');
+    Route::delete('/admin/users/{user}', [AdminController::class, 'destroyUser'])->name('admin.users.destroy');
+    Route::post('/admin/users/{user}/make-admin', [AdminController::class, 'makeAdmin'])->name('admin.users.makeAdmin');
+    Route::get('/admin/users', [AdminController::class, 'indexUsers'])->name('admin.users.index');
     // Admin Game Management
     Route::get('/admin/games/create', [GamesController::class, 'create'])->name('admin.games.create');
     Route::post('/admin/games', [GamesController::class, 'store'])->name('admin.games.store');
