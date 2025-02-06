@@ -1,5 +1,6 @@
-Inštalačný návod pre Laravel aplikáciu
-	Táto aplikácia beží na Laravel frameworku 
+Inštalačný návod pre webovú aplikáciu
+
+Táto aplikácia beží na Laravel frameworku 
 
 1. Systémové požiadavky
 
